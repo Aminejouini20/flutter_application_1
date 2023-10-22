@@ -1,21 +1,22 @@
-// lib/main.dart
 import 'package:flutter/material.dart';
-import 'package:Scaffoldapp/lib/data/loaddata.dart';
-import 'package:Scaffoldapp/lib/domain/Affirmation.dart';
+import "package:flutter_application_1/domain/Affirmation.dart";
+import "package:flutter_application_1/data/loaddata.dart";
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: AffirmationList(),
   ));
 }
 
 class AffirmationList extends StatelessWidget {
+  const AffirmationList({super.key});
+
   @override
   Widget build(BuildContext context) {
     final List<Affirmation> affirmations = loaddata();
     return Scaffold(
-      appBar: AppBar(title: Text("Affirmations")),
+      appBar: AppBar(title: const Text("Affirmations")),
       body: ListView.builder(
         itemCount: affirmations.length,
         itemBuilder: (context, index) {
@@ -28,7 +29,7 @@ class AffirmationList extends StatelessWidget {
                 Image.asset(affirmation.image, height: 194, width: 600, fit: BoxFit.cover),
                 Text(
                   affirmation.desc,
-                  style: TextStyle(fontSize: 40),
+                  style: const TextStyle(fontSize: 40),
                   textAlign: TextAlign.center,
                 ),
               ],

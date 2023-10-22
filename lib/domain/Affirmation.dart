@@ -1,5 +1,3 @@
-// lib/domain/Affirmation.dart
-
 class Affirmation {
   final String image;
   final String desc;

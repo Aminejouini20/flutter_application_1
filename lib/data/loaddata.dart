@@ -1,6 +1,5 @@
-// lib/data/loaddata.dart
-import 'package:scaffoldapp/domain/Affirmation.dart';
-import 'package:scaffoldapp/data/AppConstant.dart';
+import "package:flutter_application_1/domain/Affirmation.dart";
+import "package:flutter_application_1/data/AppConstant.dart";
 
 List<Affirmation> loaddata() {
   return List<Affirmation>.generate(
